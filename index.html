@@ -5,12 +5,56 @@
     <title>Flickr application</title>
     <link rel="stylesheet" href="bower_components/materialize/dist/css/materialize.css" media="screen" title="no title">
     <link rel="stylesheet" href="sass/ajax.css" media="screen" title="no title">
+    <link rel="stylesheet" href="./dist/css/bundle-sass.css" media="screen" title="no title">
   </head>
   <body>
+    <header>
+      <nav class="nav-extended">
+        <div class="nav-wrapper">
+          <a href="#" class="brand-logo">FlickrApp</a>
+          <a href="#" data-activates="mobile-demo" class="button-collapse"><i class="material-icons">menu</i></a>
+          <ul id="nav-mobile" class="right hide-on-med-and-down">
+            <li><a href="#">Main tab</a></li>
+          </ul>
+          <ul class="side-nav" id="mobile-demo">
+            <li><a href="#">Main tab</a></li>
+          </ul>
+          <div class="tabs tabs-transparent col s12 m2 12 center" id="tabs-menu">
+            <a class="tab" id="javascript"><button class="waves-effect waves-light btn">Javascript</button></a>
+            <a class="tab" id="html"><button class="waves-effect waves-light btn">HTML</button></a>
+            <a class="tab" id="css"><button class="waves-effect waves-light btn">CSS</button></a>
+            <a class="tab" id="angular"><button class="waves-effect waves-light btn">AngularJS</button></a>
+            <a class="tab" id="sass"><button class="waves-effect waves-light btn">Sass</button></a>
+          </div>
+        </div>
+      </nav>
+    </header>
+    <main class="row">
+      <aside class="col s3">
+        <div class="input-field col s6">
+          <input placeholder="Tags" id="search" type="text" class="validate">
+          <label for="Tags">Search</label>
+          <button class="waves-effect waves-light btn" id="validationbutton">Validate</button>
+          <div class="chip" id="tag">Tags</div>
+          <p class="range-field">
+            <input type="range" id="test5" min="2" max="20" />
+          </p>
+
+          <a class="btn-floating btn-large waves-effect waves-light red" id="voirplus"><b class="material-icons">+</b></a>
 
 
+
+        </div>
+      </aside>
+      <article class="col s9">
+        <input type="text" id="example" name="example_name" value="" />
+
+          <div id="photos"></div>
+
+      </article>
+    </main>
   <script src="bower_components/jquery/dist/jquery.min.js" charset="utf-8"></script>
   <script src="bower_components/materialize/dist/js/materialize.js" charset="utf-8"></script>
-  <script src="js/photo.js" charset="utf-8"></script>
+  <script src="js/flickrapp.js" charset="utf-8"></script>
   </body>
 </html>
